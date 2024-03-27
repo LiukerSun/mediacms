@@ -17,7 +17,7 @@ RUN pip install -r requirements.txt
 COPY . /home/mediacms.io/mediacms
 WORKDIR /home/mediacms.io/mediacms
 
-RUN wget -q http://zebulon.bok.net/Bento4/binaries/Bento4-SDK-1-6-0-637.x86_64-unknown-linux.zip && \
+RUN wget -q https://pan.liukersun.com/s/P66Cp2nF8pfWrNr/download/Bento4-SDK-1-6-0-637.x86_64-unknown-linux.zip && \
     unzip Bento4-SDK-1-6-0-637.x86_64-unknown-linux.zip -d ../bento4 && \
     mv ../bento4/Bento4-SDK-1-6-0-637.x86_64-unknown-linux/* ../bento4/ && \
     rm -rf ../bento4/Bento4-SDK-1-6-0-637.x86_64-unknown-linux && \
@@ -53,7 +53,7 @@ RUN apt-get update -y && apt-get -y upgrade && apt-get install --no-install-reco
     apt-get purge --auto-remove && \
     apt-get clean
 
-RUN wget -q https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz && \
+RUN wget -q https://pan.liukersun.com/s/RGbRC9tez4yCr2n/download/ffmpeg-release-amd64-static.tar.xz && \
     mkdir -p ffmpeg-tmp && \
     tar -xf ffmpeg-release-amd64-static.tar.xz --strip-components 1 -C ffmpeg-tmp && \
     cp -v ffmpeg-tmp/ffmpeg ffmpeg-tmp/ffprobe ffmpeg-tmp/qt-faststart /usr/local/bin && \
